@@ -1,0 +1,10 @@
+#!/bin/bash
+
+N=1
+FILE="/home/aftab/script/number.txt"
+S=$(cat /home/aftab/script/number.txt | wc -l)
+
+while [ $N -le $S ];do
+        sed -n "$N"p $FILE
+        N=$((N+1))
+done
