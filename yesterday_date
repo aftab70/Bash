@@ -1,0 +1,7 @@
+#!/bin/bash
+#set -x 
+set -e
+
+YESTERDAY="$(date --date yesterday +"%d-%m-%Y")"
+DATA=$(curl -I "www.google.com")
+echo "$DATA" > "$YESTERDAY".txt
